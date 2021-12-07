@@ -5,13 +5,22 @@ app = Flask(__name__)
 full_name = "Adam Tester"
 github_link = "https://github.com/adamgoodhandle"
 
-@app.route("/")
-def hello_world():
+@app.route("/about_me")
+def about_me():
     return render_template(
-        'index.html',
+        'about_me.html',
         full_name=full_name,
         job_role="IS Business Analysis Apprentice",
         intro_text="Qualified product design engineer and aspring techy coder. (Whatever that means!)",
+        linkedin_link="TODO",
+        github_link=github_link
+    )
+
+@app.route("/experience")
+def experience():
+    return render_template(
+        "experience.html",
+        full_name=full_name,
         linkedin_link="TODO",
         github_link=github_link
     )

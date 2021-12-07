@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+
+{% block stylesheet %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/about_me.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <img class="cover-img" src="static/images/ProfilePlaceholderSuit.png">
+    <h1 class="cover-heading">{{job_role}}</h1>
+    <p class="lead">{{intro_text}}</p>
+    <p class="lead">
+      <a href="experience" class="btn btn-lg btn-secondary">Learn more</a>
+    </p>
+  
+{% endblock %}
