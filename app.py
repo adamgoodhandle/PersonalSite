@@ -11,7 +11,7 @@ def about_me():
         'about_me.html',
         full_name=full_name,
         job_role="IS Business Analysis Apprentice",
-        intro_text="Qualified product design engineer and aspring techy coder. (Whatever that means!)",
+        intro_text="Qualified product design engineer and aspring techy coder.<br>(Whatever that means!)",
         linkedin_link="TODO",
         github_link=github_link
     )
@@ -20,6 +20,15 @@ def about_me():
 def experience():
     return render_template(
         "experience.html",
+        full_name=full_name,
+        linkedin_link="TODO",
+        github_link=github_link
+    )
+
+@app.route("/contact")
+def contact():
+    return render_template(
+        "contact.html",
         full_name=full_name,
         linkedin_link="TODO",
         github_link=github_link
